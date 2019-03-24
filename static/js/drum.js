@@ -4,5 +4,5 @@ window.addEventListener('keydown', function(e) {
     if (!audio) return; //stop the function from running all together
     audio.currentTime = 0; //rewind to the start
     audio.play();
-    console.log(key);
+    key.classList.add('playing');
 });
