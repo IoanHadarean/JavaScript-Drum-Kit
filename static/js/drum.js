@@ -14,5 +14,6 @@ keys.forEach(key => {
 });
 
 function removeTransition(e) {
-    console.log(e);
+    if (e.propertyName !== 'transform') return; // skip the transition event if it's not transform
+    this.classList.remove('playing');
 }
